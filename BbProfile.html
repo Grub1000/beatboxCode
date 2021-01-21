@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/static/BeatBox/css/Profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Didact+Gothic&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="Main_Wrapper">
+    <div class="Info_Wrapper">
+      <div class="Info_Img_Wrapper">
+        <img class="Info_img" src="{{profile.image.url}}" style="width:60px;height:60px;" alt="">
+      </div>
+      <div class="Info_Username">
+        {{profile.user.username}}
+      </div>
+      <div class="Info_Email">
+        {{profile.user.email}}
+      </div>
+    </div>
+    <div class="Form_Wrapper">
+      <form action="/beatbox/profile/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="Form_Input_Header">Change Avatar:</div>
+        <input class="Form_Input" name="image" type="file" accept="image/png, image/jpeg">
+        <input class="Form_Submit" type="submit" value="Save" />
+      </form>
+      <a href="/beatbox/">
+        <div class="Exit">Exit</div>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
