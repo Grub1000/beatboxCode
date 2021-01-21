@@ -1,0 +1,647 @@
+body{
+    background-image: url("http://127.0.0.1:8000/media/BackGround.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+.MainWrapper{
+    padding: 0;
+}
+.SiteHeaderWrapper{
+    height: 100px;
+    /* background-color: gray; */
+}
+.SearchFormWrapper{
+    float: right;
+    /* background-color: rgb(147, 253, 253); */
+    width: 440px;
+}
+.SearchInput{
+    float: left;
+    background-color: rgb(44, 44, 44);
+    width: 380px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-style: none;
+    padding-left: 10px;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.SearchInput:focus{
+    width: 378px;
+    height: 28px;
+    outline-style: none;
+    border: 1px rgb(12, 255, 85) solid;
+}
+.SearchesWrapper{
+    z-index: 99 !important;
+    background-color: rgba(10, 10, 10, 0.767);
+    width: 300px;
+    position: absolute;
+    margin-top: 52px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.CartButton{
+    float: right;
+    /* background-color: rgb(243, 137, 137); */
+    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+}
+.CartIconWrapper{
+    width: 36px;
+    height: 36px;
+    margin-top: 10px;
+}
+.CartIcon{
+    /* background-color: rgb(120, 255, 255); */
+    color: rgb(63, 63, 63);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+.CartIcon:hover{
+    color: rgb(12, 255, 85);
+}
+.CreateProductButton{
+    float: left;
+    /* background-color: darkviolet; */
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 150px;
+    color: rgb(63, 63, 63);
+    font-family: 'Jura', sans-serif;
+    transition: color .4s ease;
+}
+.CreateProductButton:hover{
+    color: rgb(61, 61, 61);
+}
+.CreateProductButtonIcon{
+    cursor: pointer;
+}
+.CreateProductButtonIcon:hover{
+    color: rgb(12, 255, 85);
+}
+.CreateProductButtonName{
+    position: relative;
+    top: 0px;
+    right: 8px;
+    /* background-color: teal; */
+    color: rgb(131, 131, 131);
+    width: 50px;
+    cursor: default;
+}
+.CreateFormWrapper{
+    z-index: 99 !important;
+    background-color: rgba(10, 10, 10, 0.767);
+    position: sticky;
+    top: 10vh;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    margin-bottom: -600px;
+    border-left: 1px solid rgb(12, 255, 85);
+    border-right: 1px solid rgb(12, 255, 85);
+    animation-name: formAnim;
+    animation-duration: 0.8s;
+}
+.CreateFormBackButton{
+    margin-bottom: 10px;
+    border-top: 1px solid rgb(211, 211, 211);
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: rgb(211, 211, 211);
+    transition: background-color .4s ease;
+}
+.CreateFormBackButton:hover{
+    background-color: rgba(10, 10, 10, 0.767);
+    border-top: 1px solid rgb(12, 255, 85);
+    color:rgb(12, 255, 85);
+}
+.CreateForm{
+    animation-name: show_content;
+    animation-delay: 0.8s;
+    animation-duration: 0.7s;
+}
+.TitleInputWrapper{
+    /* background-color: rgb(192, 192, 192); */
+    width: 205px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.TitleInput{
+    background-color: transparent;
+    outline-style: none;
+    border: none;
+    color: lightgreen;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.TitleInput:focus{
+    border-bottom: 1px solid rgb(120, 255, 255);
+}
+.TitleInput::placeholder{
+    color: white;
+    opacity: 1;
+}
+.PriceInputWrapper{
+    /* background-color: rgb(146, 146, 146); */
+    width: 205px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.PriceInput{
+    background-color: transparent;
+    outline-style: none;
+    border: none;
+    color: lightgreen;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.PriceInput:focus{
+    border-bottom: 1px solid rgb(120, 255, 255);
+}
+.PriceInput::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ImageInputWrapper{
+    background-color: darksalmon;
+    width: 87px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.ImageInput{
+    outline: none;
+    width: 87px;
+    border: 1px solid rgb(255, 255, 255);
+    color: magenta;
+}
+.DescriptionInputWrapper{
+    /* background-color: rgb(255, 0, 0); */
+    margin: auto;
+    width: 312px;
+    margin-bottom: 10px;
+}
+.DescriptionInput{
+    width: 300px;
+    height: 200px;
+    outline-style: none;
+    border: 1px solid white;
+    padding: 5px;
+    background-color: rgba(117, 117, 117, 0.637);
+    resize: none;
+    color: lightgreen;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.DescriptionInput:focus{
+    border: 1px solid rgb(120, 255, 255);
+}
+.DescriptionInput::placeholder{
+    color: white;
+    opacity: 1;
+}
+.SubmitInputWrapper{
+    background-color: lightskyblue;
+    width: 400px;
+    height: 40px;
+    margin: auto;
+    border: none;
+}
+.SubmitInput{
+    background-color: lightgreen;
+    width: 400px;
+    height: 40px;
+    border-style: none;
+    cursor: pointer;
+}
+.SubmitInput:hover{
+    background-color: rgb(120, 243, 120);
+}
+.CartWrapper{
+    z-index: 99 !important;
+    background-color: rgba(10, 10, 10, 0.767);
+    position: sticky;
+    top: 10vh;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    margin-bottom: -600px;
+    border-left: 1px solid rgb(12, 255, 85);
+    border-right: 1px solid rgb(12, 255, 85);
+    animation-name: formAnim;
+    animation-duration: 0.8s;
+}
+.CartBackButton{
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-top: 1px solid rgb(109, 109, 109);
+    margin-bottom: 5px;
+    color: gray;
+    transition: all .3s ease;
+}
+.CartBackButton:hover{
+    border-top: 1px solid rgb(12, 255, 85);
+    color: rgb(12, 255, 85);
+}
+.Cart{
+    animation-name: show_content;
+    animation-delay: 0.8s;
+    animation-duration: 0.7s;
+}
+.CartTotalMainWrapper{
+    width: 500px;
+    height:40px;
+    margin: auto;
+    font-family: 'Jura', sans-serif;
+    /* background-color: rgb(61, 61, 61); */
+}
+.FullCartMessageWrapper{
+    position: absolute;
+    background-color: rgb(0, 128, 68);
+    width: 100%;
+    cursor: pointer;
+}
+.FullCartMessage{
+    /* background-color: rgb(48, 48, 48); */
+    position: relative;
+    color: rgb(12, 255, 85);
+    width: 160px;
+    height: 26px;
+    margin: auto;
+    font-family: 'Jura', sans-serif;
+    font-size: 22px;
+}
+.AddToCartMessageWrapper{
+    position: absolute;
+    background-color: rgb(0, 128, 68);
+    width: 100%;
+    cursor: pointer;
+}
+.AddToCartMessage{
+    position: relative;
+    color: rgb(12, 255, 85);
+    width: 185px;
+    height: 26px;
+    margin: auto;
+    font-family: 'Jura', sans-serif;
+    font-size: 22px;
+}
+.SiteModeToggleWrapper{
+    height: 30px;
+    /* background-color: tomato; */
+}
+.SiteModeToggleButton{
+    background-color: rgb(10, 10, 10);
+    width: 90px;
+    height: 25px;
+    margin: auto;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.SiteModeToggleButton:hover{
+    cursor: pointer;
+}
+.AdminAnUserCard{
+    position: relative;
+    right: 5px;
+    /* background-color: rgba(255, 99, 71, 0.418); */
+    width: 200px;
+    height: 25px;
+    color: rgb(12, 255, 85);
+    transition: right .4s ease;
+}
+.AdminCard{
+    /* background-color: yellow; */
+    width:100px;
+    float: left;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+}
+.UserCard{
+    /* background-color: turquoise; */
+    width: 100px;
+    float: right;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+}
+.MainProductCardWrapper{
+    width: 75vw;
+    margin: auto;
+    /* background-color: rgba(61, 61, 61, 0.699); */
+}
+.DetailBackButton{
+    border-top: 1px solid rgb(61, 61, 61);
+    height: 35px;
+    background-color: rgba(10, 10, 10, 0.767);
+    color: rgb(61, 61, 61);
+    transition: background-color .4s ease;
+    cursor: pointer;
+}
+.DetailBackButton:hover{
+    background-color: rgb(2, 2, 2);
+    border-top: 1px solid rgb(12, 255, 85);
+    color:rgb(12, 255, 85);
+}
+.GeneralBackButtonIconDiv{
+    /* background-color: teal; */
+    position: relative;
+    top: 1px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    transition: top .12s ease;
+}
+.DetailBackButtonIcon{
+    width: 30px;
+    height: 30px;
+    /* background-color: teal; */
+}
+.DetailCard{
+    height: 450px;
+    max-width: 600px;
+    /* background-color: burlywood; */
+    color: rgb(221, 221, 221);
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+}
+.DetailDescription{
+    float: right;
+    min-width: 300px;
+    max-width: 466px;
+    border-bottom: 1px rgb(61, 61, 61) solid;
+    /* background-color: cadetblue; */
+    padding: 10px;
+}
+.DetailCartButton{
+    float: left;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 28px;
+    width: 110px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(12, 255, 85);
+    color: rgb(0, 0, 0);
+    transition: all .3s ease;
+}
+.DetailCartButton:hover{
+    background-color:rgb(88, 255, 138);
+}
+.DetailCartBackButton{
+    background-color: rgba(10, 10, 10, 0.904);
+    border-top: 1px solid white;
+    color: rgb(211, 211, 211);
+    height: 30px;
+    transition: all .3s ease;
+}
+.DetailCartBackButton:hover{
+    background-color: rgba(10, 10, 10, 0.363);
+    border-top: 1px solid rgb(12, 255, 85);
+    color: rgb(12, 255, 85);
+}
+.DetailCartBackButtonIconDiv{
+    /* background-color: lightgreen; */
+    position: relative;
+    top: 1px;
+    width: 30px;
+    height: 20px;
+    margin: auto;
+    transition: top .12s ease;
+}
+.DetailCartText{
+    height: 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+}
+.DetailCartQuantity{
+    margin-top: 2px;
+    height: 100px;
+    width: 110px;
+    background-color: rgba(10, 10, 10, 0.767);
+    border-left: 1px solid rgb(12, 255, 85);
+    border-right: 1px solid rgb(12, 255, 85);
+    animation-name: formAnimTwo;
+    animation-duration: .4s;
+}
+.DetailCartForm{
+    animation-name: show_content;
+    animation-delay: .4s;
+    animation-duration: .4s;
+}
+.DetailCartQuantitySelect{
+    outline-style: none;
+}
+.ProductCardsWrapper{
+    /* background-color: rgb(143, 143, 143); */
+    display: grid;
+    width: 75vw;
+    margin: auto;
+    margin-top: 5vh;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 10px;
+    border-top: 1px solid rgb(61, 61, 61);
+} 
+.FooterWrapper{
+    background-color: rgb(10, 10, 10);
+    height: 400px;
+}
+@media (max-width: 1800px){
+    .ProductCardsWrapper{
+    width: 70vw;
+    grid-template-columns: auto auto auto;
+    } 
+    
+}
+@media (max-width: 1300px){
+    .ProductCardsWrapper{
+    width: 72vw;
+    grid-template-columns: auto auto;
+    } 
+    
+}
+@media (max-width: 850px){
+    .ProductCardsWrapper{
+    width: 62vw;
+    grid-template-columns: auto;
+    } 
+    
+}
+@keyframes formAnim{
+    from {
+        width: 0;
+    }
+    to{
+        width: 1000px;
+    }
+}
+@keyframes formAnimTwo{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100px;
+    }
+}
+@keyframes show_content {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@media (max-width: 1100px){
+    .CreateFormWrapper{
+        width: 600px;
+    }
+    .CartWrapper{
+    width: 600px;
+    }
+    @keyframes formAnim{
+    from {
+        width: 0;
+    }
+    to{
+        width: 600px;
+    }
+}
+}
+@media (max-width: 700px){
+    .CreateFormWrapper{
+        width: 400px;
+    }
+    .CartWrapper{
+    width: 400px;
+    }
+    .CartTotalMainWrapper{
+        width: 340px;
+    }
+    .SubmitInputWrapper{
+    background-color: lightskyblue;
+    width: 320px;
+    }
+    .SubmitInput{
+    background-color: lightgreen;
+    width: 320px;
+    
+    }
+    @keyframes formAnim{
+    from {
+        width: 0;
+    }
+    to{
+        width: 400px;
+    }
+    }
+}
+@media (max-width: 470px){
+    .CreateFormWrapper{
+        width: 280px;
+    }
+    .CartWrapper{
+    width: 300px;
+    }
+    .CartTotalMainWrapper{
+    width: 290px;
+    }
+    .SubmitInputWrapper{
+    background-color: lightskyblue;
+    width: 260px;
+    }
+    .SubmitInput{
+    background-color: lightgreen;
+    width: 260px;
+    }
+    .DescriptionInputWrapper{
+    width: 240px;
+    }
+    .DescriptionInput{
+    width: 228px;
+    }
+    .SearchFormWrapper{
+    float: right;
+    /* background-color: rgb(147, 253, 253); */
+    width: 380px;
+    }
+    .SearchInput{
+    width: 300px;
+    }
+    .SearchInput:focus{
+    width: 298px;
+    }
+    @keyframes formAnim{
+    from {
+        width: 0;
+    }
+    to{
+        width: 280px;
+    }
+    }
+}
+@media (max-width: 510px){
+    .MainProductCardWrapper{
+    width: 300px;
+    margin: auto;
+    /* background-color: rgba(61, 61, 61, 0.699); */
+    }
+    .ProductCardsWrapper{
+    /* background-color: rgb(143, 143, 143); */
+    display: grid;
+    width: 300px;
+    margin: auto;
+    grid-template-columns: 300px;}
+}
+@media (max-width: 420px){
+    .SearchFormWrapper{
+    float: right;
+    /* background-color: rgb(147, 253, 253); */
+    width: 315px;
+    }
+    .SearchInput{
+    width: 235px;
+    }
+    .SearchInput:focus{
+    width: 233px;
+    }
+    .SearchesWrapper{
+    width: 220px;
+    }
+    .CreateProductButton{
+    margin-left: 80px;
+    }
+    .MainProductCardWrapper{
+    width: 300px;
+    margin: auto;
+    /* background-color: rgba(61, 61, 61, 0.699); */
+    }
+    .ProductCardsWrapper{
+    /* background-color: rgb(143, 143, 143); */
+    display: grid;
+    width: 300px;
+    margin: auto;
+    grid-template-columns: 300px;
+    }
+    .DetailDescription{
+    padding: 0px;
+    }
+}
